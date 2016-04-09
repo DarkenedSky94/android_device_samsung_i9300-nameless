@@ -55,6 +55,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT="samsung/m0xx/m0:4.3/JSS15J/I9300XXUGMJ9:user/release-keys" \
     PRIVATE_BUILD_DESC="m0xx-user 4.3 JSS15J I9300XXUGMJ9 release-keys"
 
+# Custom unofficial build tag
+TARGET_UNOFFICIAL_BUILD_ID := temasek
+
 # Override product name and device
 PRODUCT_BUILD_PROP_OVERRIDES += \
      PRODUCT_NAME=m0xx \
