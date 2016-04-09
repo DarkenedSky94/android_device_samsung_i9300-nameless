@@ -70,6 +70,12 @@ PRODUCT_PACKAGES += \
  PRODUCT_PACKAGES += \
      OTAUpdates
 
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.romname=Temasek-i9300-ds94 \
+    ro.ota.version=$(shell date +%F | sed s@-@@g) \
+    ro.ota.manifest=https://www.dropbox.com/s/u19l0gehbv9kn52/i9300_ota.xml?dl=1
+
 # Kernel control script
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/94kernel:system/etc/init.d/94kernel
