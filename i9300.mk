@@ -73,6 +73,7 @@ PRODUCT_PACKAGES += \
 # Kernel control script
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/94kernel:system/etc/init.d/94kernel
+    $(LOCAL_PATH)/configs/94-kernel.sh:system/addon.d
 
 PRODUCT_COPY_FILES += \
     packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
