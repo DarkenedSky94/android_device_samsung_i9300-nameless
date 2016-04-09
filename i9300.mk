@@ -66,6 +66,14 @@ PRODUCT_PACKAGES += \
     Nfc \
     Tag
 
+# Kryten2k35 OTAUpdates
+ PRODUCT_PACKAGES += \
+     OTAUpdates
+
+# Kernel control script
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/94kernel:system/etc/init.d/94kernel
+
 PRODUCT_COPY_FILES += \
     packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
