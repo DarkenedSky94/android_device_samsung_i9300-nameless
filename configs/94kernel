@@ -2,7 +2,7 @@
 # This is an init.d script to control some aspects of the kernel
 # Please make sure that you know what you are doing!
 # Uncomment all parts of the script you want to use by deleting the beginning "#" in the code-line.
-# Sometimes you have to give a value. Then simply replace the "xx" with your value. Make sure to use a value within the given range. 
+# "echo 1" means enabled, "echo 0" means disabled, "echo xx" means that you have to replace the "xx" with a value of your choice.
 # If something goes wrong, delete this file and reboot. It can also be deleted from TWRP file manager.
 # Script written by darkened_sky
 
@@ -69,3 +69,29 @@
 #Privacy mode
 #This setting causes the speakers to be completely muted for all sounds as long as headphones are plugged in. This is applied globally to the whole system
 #echo 1 > /sys/class/misc/boeffla_sound/privacy_mode
+
+
+#------Charge Levels (by Lord Boeffla)------#
+
+#AC charge rate
+#This configures the charging rate when you load your phone via an AC charger
+#-->min:0 (off), max:1600, unit:mA, steps:1
+#echo xx > /sys/kernel/charge_levels/charge_level_ac
+
+#USB charge rate
+#This configures the charging rate when you load your phone via an USB
+#-->min:0 (off), max:1600, unit:mA, steps:1
+#echo xx > /sys/kernel/charge_levels/charge_level_usb
+
+#Wireless charge rate
+#This configures the charging rate when you load your phone via a wireless charging cover
+#-->min:0 (off), max:1600, unit:mA, steps:1
+#echo xx > /sys/kernel/charge_levels/charge_level_wireless
+
+#Ignore unstable power
+#By switching this option to on, the charging logic will NOT reduce the charging current for faulty chargers with unstable power. Use at your own risk!
+#echo 1 > /sys/kernel/charge_levels/ignore_unstable_power
+
+#Ignore safety margin
+#By switching this option to on, the further deduction of 100 mA after detecting a stable charging power will not be done. Use at your own risk!
+#echo 1 > /sys/kernel/charge_levels/ignore_safety_margin
