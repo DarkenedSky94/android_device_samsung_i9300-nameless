@@ -74,6 +74,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/94kernel:system/etc/init.d/94kernel
     $(LOCAL_PATH)/configs/94-kernel.sh:system/addon.d
+    
+# Low-RAM optimizations
+ADDITIONAL_BUILD_PROPERTIES += \
+	config.disable_atlas=true
 
 PRODUCT_COPY_FILES += \
     packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
