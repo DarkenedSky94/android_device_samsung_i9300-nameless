@@ -32,7 +32,7 @@ TARGET_SCREEN_WIDTH := 720
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/nameless/config/common.mk)
+$(call inherit-product, vendor/cm/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/samsung/i9300/i9300.mk)
@@ -41,7 +41,7 @@ $(call inherit-product, device/samsung/i9300/i9300.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := nameless_i9300
+PRODUCT_NAME := cm_i9300
 PRODUCT_DEVICE := i9300
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
